@@ -7,3 +7,4 @@
 do_not_checkin
 java/simple-war/simple.war
 java/simple-war/build
+gradle/.gradle

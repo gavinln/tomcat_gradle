@@ -1,0 +1,13 @@
+ant.importBuild '../java/simple-war/build.xml'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2'
+}
+
+
+task deployToTomcat(type: Copy) {
+    // does not work as sudo permission needed
+    def tomcatHome = System.getenv('CATALINA_HOME')
+    from '../java/simple-war/simple.war'
+    into "$tomcatHome/webapps"
+}
