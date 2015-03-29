@@ -1,0 +1,19 @@
+To install Gradle
+sudo apt-get install gradle
+
+cd /vagrant/gradle
+source set_env.sh
+./gradlew tasks
+
+Using Gradle to build simple.war
+
+1. Setup directories
+gradle init
+
+2. Clean up
+gradle clean
+
+3. Compile
+gradle compile
+
+
