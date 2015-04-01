@@ -1,19 +1,33 @@
 To install Gradle
-sudo apt-get install gradle
-
+1. Go to the Gradle directory
 cd /vagrant/gradle
+
+2. Set up the environment variables
 source set_env.sh
+
+3. Display all the tasks
 ./gradlew tasks
 
-Using Gradle to build simple.war
-
+Build the simple.war file using Gradle
 1. Setup directories
-gradle init
+./gradlew init
 
 2. Clean up
-gradle clean
+./gradlew clean
 
-3. Compile
-gradle compile
+3. Build the war file
+./gradlew build
+
+4. Copy the war file to the Tomcat directory
+sudo ./copy_war.sh
+
+5. Startup the Tomcat server
+sudo /opt/apache-tomcat/bin/s tartup.sh
+
+6. View the simple app by opening a web brower to the location
+http://192.168.33.10:8080/simple/
+
+7. Access the Servlet by going to the location
+http://192.168.33.10:8080/simple/hello
 
 
