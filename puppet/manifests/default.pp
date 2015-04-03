@@ -13,7 +13,8 @@ Exec {
 node 'tomcat_gradle' {
     class {
         init: ;
-        # python_setup:;
+        python_setup:;
+        docker:;
         ohmyzsh_setup:;
         java_setup:;
     }
