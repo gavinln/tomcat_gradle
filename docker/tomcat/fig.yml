@@ -1,0 +1,7 @@
+tomcat:
+    : .
+    ports:
+        - "8001:8080"
+    volumes:
+        - ./workspace:/workspace
+
