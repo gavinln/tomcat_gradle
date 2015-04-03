@@ -22,12 +22,30 @@ Build the simple.war file using Gradle
 sudo ./copy_war.sh
 
 5. Startup the Tomcat server
-sudo /opt/apache-tomcat/bin/s tartup.sh
+sudo /opt/apache-tomcat/bin/startup.sh
 
 6. View the simple app by opening a web brower to the location
 http://192.168.33.10:8080/simple/
 
 7. Access the Servlet by going to the location
 http://192.168.33.10:8080/simple/hello
+
+To use Docker without sudo
+sudo gpasswd -a ${USER} docker
+
+Using apt-get with a proxy
+sudo http_proxy=http://192.168.0.100:3128 apt-get upgrade
+
+To start Docker tomcat instances
+1. cd /vagrant/gradle
+
+2. Build the tomcat war as above and copy it
+sudo ./copy_docker_war.sh
+
+3. Build the Docker images
+sudo fig build
+
+4. Run the container and Tomcat
+sudo fig up -d
 
 
