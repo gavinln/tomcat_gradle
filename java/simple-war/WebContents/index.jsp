@@ -3,6 +3,6 @@
     <title><%= request.getAttribute("title") %></title>
 </head>
 <body>
-    Hello, world.
+    Hello, from machine <%= request.getAttribute("machine") %>.
 </body>
 </html>
