@@ -42,10 +42,13 @@ To start Docker tomcat instances
 2. Build the tomcat war as above and copy it
 sudo ./copy_docker_war.sh
 
-3. Build the Docker images
+3. Change to the docker tomcat directory
+cd /vagrant/docker/tomcat
+
+4. Build the Docker images
 sudo fig build
 
-4. Run the container and Tomcat
+5. Run the container and Tomcat
 sudo fig up -d
 
 
