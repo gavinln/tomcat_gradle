@@ -9,25 +9,28 @@ source set_env.sh
 ./gradlew tasks
 
 Build the simple.war file using Gradle
-1. Setup directories
+1. Make a directory to store the compiled classes
+mkdir /vagrant/java/simple-war/lib
+
+2. Setup directories
 ./gradlew init
 
-2. Clean up
+3. Clean up
 ./gradlew clean
 
-3. Build the war file
+4. Build the war file
 ./gradlew build
 
-4. Copy the war file to the Tomcat directory
+5. Copy the war file to the Tomcat directory
 sudo ./copy_war.sh
 
-5. Startup the Tomcat server
+6. Startup the Tomcat server
 sudo /opt/apache-tomcat/bin/startup.sh
 
-6. View the simple app by opening a web brower to the location
+7. View the simple app by opening a web brower to the location
 http://192.168.33.10:8080/simple/
 
-7. Access the Servlet by going to the location
+9. Access the Servlet by going to the location
 http://192.168.33.10:8080/simple/hello
 
 To use Docker without sudo
