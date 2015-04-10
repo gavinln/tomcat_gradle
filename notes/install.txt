@@ -1,3 +1,29 @@
+To start Docker tomcat instances
+1. cd /vagrant/gradle
+
+2. Build the tomcat war as above and copy it
+sudo ./copy_docker_war.sh
+
+3. Change to the docker tomcat directory
+cd /vagrant/docker/tomcat
+
+4. Build the Docker images
+sudo fig build
+
+5. Run the container and Tomcat
+sudo fig up -d
+
+6. Display ports
+sudo fig ps
+
+7. To view the Tomcat war open a browser http://192.168.33.10:PORT/simple/hello
+
+8. Connect to running container
+ sudo docker exec -ti tomcat_tomcat_1 bash
+
+To set up Docker with sudo
+sudo gpasswd -a ${USER} docker
+
 To install Gradle
 1. Go to the Gradle directory
 cd /vagrant/gradle
@@ -38,20 +64,4 @@ sudo gpasswd -a ${USER} docker
 
 Using apt-get with a proxy
 sudo http_proxy=http://192.168.0.100:3128 apt-get upgrade
-
-To start Docker tomcat instances
-1. cd /vagrant/gradle
-
-2. Build the tomcat war as above and copy it
-sudo ./copy_docker_war.sh
-
-3. Change to the docker tomcat directory
-cd /vagrant/docker/tomcat
-
-4. Build the Docker images
-sudo fig build
-
-5. Run the container and Tomcat
-sudo fig up -d
-
 
