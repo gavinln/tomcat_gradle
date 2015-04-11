@@ -19,7 +19,7 @@ sudo fig ps
 7. To view the Tomcat war open a browser http://192.168.33.10:PORT/simple/hello
 
 8. Connect to running container
- sudo docker exec -ti tomcat_tomcat_1 bash
+sudo docker exec -ti tomcat_tomcat_1 bash
 
 To set up Docker with sudo
 sudo gpasswd -a ${USER} docker

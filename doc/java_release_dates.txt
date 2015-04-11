@@ -1,0 +1,7 @@
+Java 6
+Release: December 11, 2006
+Final public update: 2013-04-16, Java SE 6 Update 45
+Latest support program update: 2015-01-21, Java SE 6 Update 91
+
+Java 7
+Release: July 28, 2011
